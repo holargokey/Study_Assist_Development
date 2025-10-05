@@ -1,7 +1,0 @@
-flask
-pypdf
-python-docx
-openai
-langchain
-langchain-openai
-chromadb
