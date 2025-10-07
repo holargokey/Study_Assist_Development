@@ -1,0 +1,123 @@
+:root {
+  --background_grey: #f6f6f6;
+  --background_white: #ffffff;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 100%;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+  margin: 0;
+}
+
+body {
+  background-color: var(--background_grey);
+}
+
+.left-panel {
+  background-color: #f1f3f5;
+  padding: 2rem;
+  height: 100vh;
+}
+
+.upload-box {
+  border: 2px dashed #ced4da;
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  background-color: var(--background_white);
+}
+
+.right-panel {
+  padding: 2rem;
+  background-color: var(--background_white);
+  flex-grow: 1;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.question-input {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.slider-label {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+.form-range {
+  appearance: none;
+  width: 100%;
+  height: 0.5rem;
+  border-radius: 0.25rem;
+  background: none; /* JS will dynamically set this */
+  transition: background 0.3s ease;
+}
+
+.form-range::-webkit-slider-thumb {
+  appearance: none;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  background: orange;
+  cursor: pointer;
+  border: none;
+  margin-top: -4px;
+  position: relative;
+  z-index: 2;
+}
+
+.form-range::-moz-range-thumb {
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  background: orange;
+  cursor: pointer;
+  border: none;
+}
+
+.form-range::-ms-thumb {
+  background: orange;
+}

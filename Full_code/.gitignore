@@ -1,0 +1,32 @@
+# --- Secrets ---
+.env
+*.env
+Openai_secret.env
+
+# --- Python build/cache ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.log
+*.pyc
+
+# --- Virtual environments ---
+.venv/
+venv/
+venv_study_assist/
+
+# --- App runtime data ---
+uploads/
+chroma_db_*/
+*.db
+# (covers folders like chroma_db_Bayer_CP_EIR_Report_6a43a23, etc.)
+
+# --- Flask instance dir (if you ever use it) ---
+instance/
+
+# --- OS / editor junk ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

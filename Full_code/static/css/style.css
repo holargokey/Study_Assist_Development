@@ -1,0 +1,184 @@
+:root {
+  --background_grey: #f6f6f6;
+  --background_white: #ffffff;
+}
+
+/* Reset and base styles */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 100%;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+  margin: 0;
+}
+
+/* Layout Styling */
+body {
+  background-color: var(--background_grey);
+}
+
+.left-panel {
+  background-color: #f1f3f5;
+  padding: 2rem;
+  height: 100vh;
+}
+
+.upload-box {
+  border: 2px dashed #ced4da;
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  background-color: var(--background_white);
+}
+
+.right-panel {
+  padding: 2rem;
+  background-color: var(--background_white);
+  width: 100%;
+}
+
+.question-input {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.slider-label {
+  margin-bottom: 0.5rem;
+}
+
+.slider-value {
+  font-weight: bold;
+}
+
+#filePreview {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-family: monospace;
+}
+
+/* Orange Slider */
+input[type="range"].quiz-range {
+  accent-color: orange;
+}
+
+input[type="range"].quiz-range::-webkit-slider-runnable-track {
+  height: 6px;
+  background: linear-gradient(
+    to right,
+    orange 0%,
+    orange var(--progress),
+    #ccc var(--progress),
+    #ccc 100%
+  );
+  border-radius: 5px;
+}
+
+input[type="range"].quiz-range::-webkit-slider-thumb {
+  background-color: orange;
+  border: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  margin-top: -7px;
+  cursor: pointer;
+}
+
+input[type="range"].quiz-range::-moz-range-track {
+  background: #ccc;
+  height: 6px;
+}
+
+input[type="range"].quiz-range::-moz-range-progress {
+  background-color: orange;
+  height: 6px;
+}
+
+input[type="range"].quiz-range::-moz-range-thumb {
+  background-color: orange;
+  border: none;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+}
+
+/*Somoye Added
+/* Gutter between panels that holds the chevron tab */
+.sidebar-gutter {
+  width: 18px;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 8px;
+}
+
+/* The chevron tab */
+.sidebar-handle {
+  width: 26px;
+  height: 52px;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1;
+  padding: 0;
+  border: 1px solid #dee2e6;
+  border-left: none;
+  background: #f8f9fa;
+  color: #343a40;
+  cursor: pointer;
+  border-radius: 0 8px 8px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 8px; 
+}
+
+.sidebar-handle:hover {
+  background: #e9ecef;
+}
+
+/* animate right panel width changes a bit */
+#rightPanel {
+  transition: width 200ms ease;
+}
+
